@@ -1,0 +1,1488 @@
+
+:root {
+  --primary-color: #00f2fe;
+  --secondary-color: #4facfe;
+  --dark-bg: #141313;
+  --accent-color: #4ef8ff;
+}
+
+
+.tab-pane {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.tab-pane.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+body {
+  background-color: var(--dark-bg);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: relative;
+  z-index: 2; /* Higher than cyber-grid */
+  }
+
+
+  .logo-container img {
+    max-height: 45px; /* Default size */
+    width: auto;
+    }
+
+  
+
+/*-----------------------=========================  Content sections =====================----------------------- */
+.content-section {
+  min-height: 100vh;
+  padding: 80px 0;
+}
+
+/* -----------------------=============================-- -About section -----=================-------------------------- */
+.about-card {
+  background: rgba(10,25,47,0.8);
+  border: 1px solid rgba(79,172,254,0.2);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.about-feature {
+  background: rgba(0,242,254,0.05);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.about-feature:hover {
+  transform: translateY(-5px);
+  background: rgba(0,242,254,0.1);
+}
+
+
+
+/* -------------------------------============= FAQ section =====================================================*/
+.accordion-item {
+  background: rgba(10,25,47,0.8);
+  border: 1px solid rgba(79,172,254,0.2);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  background: rgba(0,242,254,0.05) !important;
+  color: #fff !important;
+  border: none;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(0,242,254,0.1) !important;
+  color: var(--accent-color) !important;
+}
+
+.accordion-body {
+  background: rgba(10,25,47,0.8);
+  color: #fff;
+  padding: 20px;
+}
+
+/* ====================================== Prize section enhancements ============================================= */
+.prize-amount {
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 15px 0;
+}
+
+.prize-extra {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
+
+
+/*======================================= Cyberpunk grid background ==============================*/
+.cyber-grid {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: 
+  linear-gradient(transparent 0%, rgba(0,242,254,0.1) 2%, transparent 3%),
+  linear-gradient(90deg, transparent 0%, rgba(0,242,254,0.1) 2%, transparent 3%);
+background-size: 50px 50px;
+pointer-events: none;
+z-index: 0; /* Place it below header and other elements */
+}
+
+/* Example for a responsive grid */
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+  gap: 10px;
+  }
+
+
+/*=================================================== Hero Section ============================================*/
+
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #040B14 0%, #0A192F 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(79,172,254,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(0,242,254,0.1) 0%, transparent 50%);
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0,242,254,0.5);
+}
+
+
+
+
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #040B14 0%, #0A192F 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  }
+  
+
+  
+  /* Gradient overlay to help with blending */
+  .hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, var(--dark-bg) 0%, transparent 90%);
+  pointer-events: none;
+  }
+  
+  /* Adjust existing hero content to sit above the architectural drawing */
+  .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  }
+  
+  /* Make sure the cyber grid stays below the architectural drawing */
+  .cyber-grid {
+  z-index: 0;
+  }
+  
+ /* =========================================================== Background =================================== */ 
+
+  .architectural-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    background-image: url("amrita.png");
+    background-position: center 80%;  /* Moves it 10% up from the bottom */
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    }
+
+
+
+
+
+
+    .space-background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+      }
+      
+      
+      .rocket svg {
+      width: 100%;
+      height: 100%;
+      }
+      
+      .rocket-trail {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      opacity: 0;
+      pointer-events: none;
+      }
+      
+      .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: #fff;
+      border-radius: 50%;
+      }
+      
+      .star.medium {
+      width: 4px;
+      height: 4px;
+      }
+      
+      .star.large {
+      width: 5px;
+      height: 5px;
+      }
+      
+      .star.twinkle-1 {
+      animation: twinkle 3s infinite;
+      }
+      
+      .star.twinkle-2 {
+      animation: twinkle 4s infinite;
+      animation-delay: -2s;
+      }
+      
+      .star.twinkle-3 {
+      animation: twinkle 5s infinite;
+      animation-delay: -1s;
+      }
+      
+
+      .rocket {
+      position: absolute;
+      /* width: 50px; /* Smaller width */
+      /* height: 50px; Smaller height */
+      filter: drop-shadow(0 0 10px rgba(0,242,254,0.5));
+      }
+      
+
+      /* Unique style for Rocket 1 */
+      .rocket-1-style {
+      width: 80px;
+      height: 80px;
+      }
+      
+      /* Unique style for Rocket 2 */
+      .rocket-2-style {
+      width: 50px;
+      height: 50px;
+      filter: drop-shadow(0 0 5px rgba(0,200,200,0.5));
+      }
+      
+
+      
+      .rocket-1 {
+      animation: rocketPath1 30s linear infinite;
+      }
+      
+      .rocket-2 {
+      animation: rocketPath2 25s linear infinite;
+      animation-delay: -15s;
+      }
+      
+      
+
+            /* Apply the new path to rocket-3 */
+            .rocket-3-style {
+              position: absolute;
+              width: 50px;
+              height: 50px;
+              animation: rocket3-path 12s linear infinite;
+              filter: drop-shadow(0 0 10px rgba(0,242,254,0.5));
+              }      
+      
+      /* Animation for rocket-3 */
+      @keyframes rocket3-path {
+      0% {
+      transform: translate(10vw, 10vh) rotate(0deg);
+      }
+      25% {
+      transform: translate(80vw, 20vh) rotate(45deg);
+      }
+      50% {
+      transform: translate(40vw, 70vh) rotate(90deg);
+      }
+      75% {
+      transform: translate(10vw, 50vh) rotate(135deg);
+      }
+      100% {
+      transform: translate(10vw, 10vh) rotate(360deg);
+      }
+      }
+      
+
+      
+      @keyframes rocketPath1 {
+      0% {
+      transform: translate(5vw, 5vh) rotate(45deg);
+      }
+      25% {
+      transform: translate(90vw, 10vh) rotate(-15deg);
+      }
+      50% {
+      transform: translate(90vw, 90vh) rotate(-45deg);
+      }
+      75% {
+      transform: translate(5vw, 85vh) rotate(15deg);
+      }
+      100% {
+      transform: translate(5vw, 5vh) rotate(45deg);
+      }
+      }
+      
+      @keyframes rocketPath2 {
+      0% {
+      transform: translate(95vw, 5vh) rotate(-135deg);
+      }
+      25% {
+      transform: translate(25vw, 95vh) rotate(135deg);
+      }
+      50% {
+      transform: translate(5vw, 25vh) rotate(45deg);
+      }
+      75% {
+      transform: translate(75vw, 5vh) rotate(-45deg);
+      }
+      100% {
+      transform: translate(95vw, 5vh) rotate(-135deg);
+      }
+      }
+      
+  
+      
+      @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+      }
+      
+      @keyframes trailFade {
+      0% {
+      opacity: 0.8;
+      transform: scale(1);
+      }
+      100% {
+      opacity: 0;
+      transform: scale(0);
+      }
+      }
+      
+      
+      
+
+
+
+
+/* ================================================== navigation ============================================== */
+.nav-tabs {
+  background: rgba(0,242,254,0.1);
+  border: 1px solid rgba(79,172,254,0.2);
+  border-radius: 50px;
+  padding: 5px;
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.nav-tabs .nav-link {
+  color: var(--accent-color);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: var(--dark-bg);
+}
+
+
+
+    /*================================================  venue  =============================================*/
+
+
+
+.venue-card {
+background: rgba(10,25,47,0.8);
+border: 1px solid rgba(79,172,254,0.2);
+border-radius: 15px;
+padding: 30px;
+margin-bottom: 30px;
+}
+
+.venue-feature {
+background: rgba(0,242,254,0.05);
+border-radius: 10px;
+padding: 30px;
+margin: 10px;
+transition: all 0.3s ease;
+border: 1px solid rgba(79,172,254,0.1);
+}
+
+.venue-feature:hover {
+transform: translateY(-5px);
+background: rgba(0,242,254,0.1);
+box-shadow: 0 10px 30px rgba(0,242,254,0.1);
+}
+
+.venue-icon {
+color: var(--accent-color);
+}
+
+.venue-floor {
+font-size: 1.5rem;
+color: var(--primary-color);
+font-weight: bold;
+margin-bottom: 1rem;
+}
+
+.venue-description {
+color: rgba(255,255,255,0.8);
+font-size: 1.1rem;
+line-height: 1.6;
+}
+
+.venue-facilities {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;
+}
+
+.facility-item {
+background: rgba(0,242,254,0.1);
+padding: 0.5rem 1rem;
+border-radius: 20px;
+font-size: 0.9rem;
+transition: all 0.3s ease;
+}
+
+.facility-item:hover {
+background: rgba(0,242,254,0.2);
+transform: translateY(-2px);
+}
+
+
+
+
+/* =============================================== Schedule section =================================================*/
+
+.schedule-container {
+  background: rgba(10,25,47,0.8);
+  border-radius: 15px;
+  border: 1px solid rgba(79,172,254,0.2);
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.schedule-item {
+  background: rgba(0,242,254,0.05);
+  border-left: 3px solid var(--accent-color);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 0 10px 10px 0;
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s forwards;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.schedule-item:hover {
+  background: rgba(0,242,254,0.1);
+  transform: translateX(5px);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*  ============================================= Register button ==================================== */
+
+
+.register-btn {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: var(--dark-bg);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0,242,254,0.4);
+}
+
+.register-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.2);
+  transform: rotate(45deg);
+  animation: buttonShine 3s infinite;
+}
+
+@keyframes buttonShine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+
+/*======================================================== Prize cards ======================================== */
+
+.prize-card {
+  background: rgba(10,25,47,0.8);
+  border: 1px solid rgba(79,172,254,0.2);
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  width: 100%; /* Adjusts to full container width */
+max-width: 400px;  /* Set desired width */
+  height: 320px;
+}
+
+.prize-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(79,172,254,0.1), transparent);
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+
+.prize-card:hover::before {
+  transform: translateX(100%);
+}
+
+.prize-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,242,254,0.2);
+}
+
+
+/*============================================ Custom scrollbar ================================================ */
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+  border-radius: 5px;
+}
+
+
+/*============================================ Team/Crew section ================================================ */
+
+.team-section {
+padding: 0px 0;
+}
+
+.team-card {
+background: rgba(10,25,47,0.8);
+border: 1px solid rgba(79,172,254,0.2);
+border-radius: 15px;
+padding: 30px;
+margin: 15px;
+transition: all 0.3s ease;
+text-align: center;
+}
+
+.team-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 30px rgba(0,242,254,0.2);
+}
+
+.team-member-img {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+margin-bottom: 20px;
+border: 3px solid var(--accent-color);
+padding: 5px;
+}
+
+.team-member-name {
+color: var(--accent-color);
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+.team-member-position {
+color: var(--secondary-color);
+font-size: 1.1rem;
+margin-bottom: 15px;
+}
+
+.team-member-contact {
+margin-top: 15px;
+padding-top: 15px;
+border-top: 1px solid rgba(79,172,254,0.2);
+}
+
+.team-member-contact a {
+color: var(--primary-color);
+text-decoration: none;
+margin: 5px 0;
+display: block;
+transition: color 0.3s ease;
+}
+
+.team-member-contact a:hover {
+color: var(--accent-color);
+}
+
+
+
+
+    /*=================================================== footer ===================================================== */
+
+
+
+    .footer-section {
+position: relative;
+background: linear-gradient(180deg, var(--dark-bg) 0%, #0a1525 100%);
+padding: 80px 0 20px;
+margin-top: 150px;
+overflow: hidden;
+
+width: 100vw; /* Ensure full viewport width */
+margin-left: calc(50% - 51vw); /* Center it */
+
+}
+
+
+.cyber-grid-footer {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: 
+linear-gradient(transparent 0%, rgba(0,242,254,0.05) 2%, transparent 3%),
+linear-gradient(90deg, transparent 0%, rgba(0,242,254,0.05) 2%, transparent 3%);
+background-size: 50px 50px;
+pointer-events: none;
+opacity: 0.5;
+}
+
+.gradient-text {
+background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: 700;
+}
+
+.footer-title {
+color: var(--accent-color);
+margin-bottom: 1.5rem;
+font-weight: 500;
+}
+
+.footer-links {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.footer-links li {
+margin-bottom: 12px;
+}
+
+.footer-links a, .footer-links li {
+color: rgba(255,255,255,0.8);
+text-decoration: none;
+transition: all 0.3s ease;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.footer-links a:hover {
+color: var(--accent-color);
+transform: translateX(5px);
+}
+
+.social-links {
+display: flex;
+gap: 15px;
+}
+
+.social-link {
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid rgba(79,172,254,0.2);
+border-radius: 50%;
+color: var(--accent-color);
+transition: all 0.3s ease;
+background: rgba(0,242,254,0.05);
+}
+
+.social-link:hover {
+background: rgba(0,242,254,0.1);
+transform: translateY(-3px);
+color: var(--primary-color);
+}
+
+
+.footer-bottom {
+margin-top: 5px;
+padding-top: 10px;
+border-top: 1px solid rgba(79,172,254,0.2);
+}
+
+.footer-bottom p {
+color: rgba(255,255,255,0.6);
+}
+
+.footer-bottom-link {
+color: rgba(255,255,255,0.6);
+text-decoration: none;
+margin-left: 20px;
+transition: color 0.3s ease;
+}
+
+.footer-bottom-link:hover {
+color: var(--accent-color);
+}
+
+
+
+/* ===================================================== Timer Problem statements ================================== */ 
+
+
+.countdown-timer {
+font-size: 1.5rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.countdown-timer2 {
+font-size: 1.5rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+
+
+/* ===================================================== scroll-indicator ================================== */
+
+
+.scroll-indicator {
+position: fixed;
+bottom: 20px; /* Distance from the bottom */
+right: 20px; /* Distance from the right */
+display: flex;
+align-items: center;
+gap: 10px; /* Space between text and arrow */
+opacity: 0.8;
+z-index: 1000;
+}
+
+.scroll-text {
+font-size: 1.1rem;
+color: var(--primary-color); /* Matches arrow color */
+font-weight: bold;
+animation: fadeIn 2s infinite; /* Optional subtle fade-in animation */
+}
+
+.arrow {
+width: 40px;
+height: auto;
+animation: arrow-bounce 1s infinite;
+}
+
+/* Bounce Animation for Arrow */
+@keyframes arrow-bounce {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(10px);
+}
+}
+
+
+
+/*================================================== Team Line UP table ============================================  */
+
+/* Style for the entire card with green edge lighting */
+.glow-box {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+border-radius: 8px;
+background: rgba(10, 25, 47, 0.8);
+box-shadow: 0 0 10px 2px rgba(135, 206, 250, 0.6), 0 0 20px 5px rgba(135, 206, 250, 0.3); /* Sky-blue glow */
+border: 1px solid rgba(135, 206, 250, 0.6); /* Sky-blue border */
+}
+
+
+/* Style for the text color and table layout */
+.table {
+color: white;
+border: 1px solid #ffffff;
+}
+
+.table th, .table td {
+border-bottom: 1px solid #fffefe8f;
+padding: 8px;
+}
+
+.table th {
+border-right: 1px solid rgba(255, 255, 255, 0.548);
+}
+
+.table td {
+border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.text-center {
+color: white;
+margin-bottom: 10px;
+}
+
+
+/* ===================================================== Timer Registration Ends ================================== */
+
+
+#countdown {
+  position: absolute;
+  bottom: -150px; /* Adjust this value to position vertically */
+  right: 230px;   /* Adjust to position horizontally */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin-top: 20px;
+}
+
+#blast-off {
+  font-size: 1em; /* Decreased size of the blast-off text */
+  color: white;
+  margin-bottom: 10px;
+}
+
+.time-section {
+  display: flex;
+  justify-content: center;
+  gap: 0px; /* Reduced gap between time units */
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px; /* Decreased width of each time unit */
+}
+
+.time-unit span {
+  color: rgb(255, 255, 255); /* Text color */
+  font-size: 1.3em; /* Decreased font size of numbers */
+}
+
+.time-unit p {
+  margin-top: 3px; /* Reduced margin above the labels */
+  font-size: 0.7em !important; /* Decreased font size of labels with !important */
+  color: #b0b0b0;   /* Label color */
+}
+
+
+
+
+
+
+
+
+
+/* =================================  Hamburger ============================================*/
+
+
+.hamburger-menu {
+  position: absolute; /* Keeps the icon fixed on the screen */
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1100; /* Ensures the hamburger is on top of other elements */
+
+  /* Background and border styles */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  color: white; /* Icon color */
+  padding: 10px 15px; /* Add some padding inside the box */
+  border-radius: 12px; /* Curves the corners of the box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.hamburger-menu:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Darker background on hover */
+  transform: scale(1.05); /* Slightly enlarges the icon on hover */
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%; /* Full width for the phone */
+  height: 100%; /* Full height for the phone */
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto; /* Allow scrolling if the content is long */
+}
+
+
+/* .dropdown-menu .nav-link {
+  color: white;
+  
+  display: block;
+} */
+
+
+
+/* Adjust font size and font style for the dropdown menu items */
+.dropdown-menu .nav-link {
+  font-size: 1.1rem; /* Increase font size (adjust as needed) */
+  font-family: 'Lato', sans-serif; /* Change font family (customize as needed) */
+  color: white; /* Keep the text color white or adjust as needed */
+  padding: 10px 0; /* Adjust the padding for better spacing */
+}
+
+/* Optional: You can also style the dropdown menu itself if needed */
+.dropdown-menu {
+  font-family: 'Arial, sans-serif'; /* Apply the font family to the entire dropdown */
+  background-color: rgba(0, 0, 0, 0.8); /* Keep the background dark or customize */
+  padding: 15px; /* Adjust padding for the dropdown box */
+  border-radius: 8px; /* Keep the rounded corners */
+}
+
+
+
+
+
+
+
+/* Basic styling for the nav-link */
+.nav-link {
+  color: var(--primary-color); /* Initial text color using primary color */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and movement */
+}
+
+/* Hover effect for the nav-link */
+.nav-link:hover {
+  color: var(--accent-color); /* Change text color on hover using accent color */
+  transform: translateX(5px); /* Slide the text slightly to the right */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for Bootstrap Icons */
+.nav-link .bi {
+  transition: transform 0.3s, color 0.3s; /* Smooth transition for icon transform and color */
+}
+
+.nav-link:hover .bi {
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+  color: var(--accent-color); /* Change icon color to accent color */
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+      display: block;
+  }
+  .hidden-phone {
+      display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  #show-more {
+      display: none;
+  }
+}
+
+
+
+
+@media (min-width: 1024px) {
+  .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px; /* Width of the sidebar */
+    height: 100%; /* Full height of the screen */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+  }
+}
+
+  
+
+
+/*  ============================================== see more button  =================================*/
+.see-more-btn {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  color: white; /* Set text color to white */
+  font-size: 1rem; /* Adjust the font size as needed */
+  cursor: pointer; /* Show pointer on hover */
+  padding: 0; /* Remove padding */
+  text-decoration: none; /* Remove underline */
+}
+
+.see-more-btn:hover {
+  text-decoration: underline; /* Optional: Underline text on hover */
+}
+
+
+
+
+
+/* ===================================================== Media Adjustments ================================== */
+
+/* Hide "Rules" tab on screens smaller than 768px */
+@media (max-width: 768px) {
+  #rulesTab {
+    display: none;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+
+
+  .hero h1 {
+    font-size: 2.6rem; /* Further decrease font size for mobile screens */
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .register-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .tab-pane {
+    padding: 10px;
+  }
+
+  .team-member-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-member-contact a {
+    font-size: 0.9rem;
+  }
+
+
+#countdown {
+    position: static; /* Positions the countdown normally for mobile */
+    margin-top: 30px; /* Adds space above the countdown */
+    text-align: center; /* Centers the countdown horizontally */
+}
+
+#blast-off {
+    font-size: 0.9em; /* Adjust font size */
+}
+
+.time-section {
+    flex-direction: row; /* Keeps items in a row */
+    gap: 5px; /* Reduces the space between items */
+}
+
+.time-unit span {
+    font-size: 1.2em; /* Decrease number font size for mobile */
+}
+
+.time-unit p {
+    font-size: 0.7em; /* Smaller label text */
+}
+
+
+.scroll-indicator {
+bottom: 15px; /* Slightly closer to the bottom on mobile */
+right: 15px; /* Slightly closer to the right on mobile */
+gap: 5px; /* Reduce space between text and arrow */
+}
+
+.scroll-text {
+font-size: 0.8rem; /* Reduce font size for mobile */
+}
+
+.arrow {
+width: 22px; /* Decrease arrow size for mobile */
+animation: arrow-bounce 1s infinite;
+}
+
+
+.grid-section {
+  grid-template-columns: 1fr; /* One column on mobile */
+  }
+
+  .architectural-bg {
+    background-size: cover;
+    background-position: center bottom;
+    }
+
+
+.logo-container img {
+      max-height: 35px; /* Medium screens */
+      }
+
+
+
+.footer-section {
+        padding: 50px 0 20px;
+        }
+        
+.footer-bottom .text-md-end {
+        text-align: left !important;
+        margin-top: 15px;
+        }
+        
+.footer-bottom-link {
+        margin-left: 0;
+        margin-right: 20px;
+        }
+
+
+        .venue-card {
+          background: rgba(10,25,47,0.8);
+          border: 1px solid rgba(79,172,254,0.2);
+          border-radius: 20px;
+          padding: 20px;
+          margin: 0;
+          width: 95vw; /* Use viewport width */
+          box-sizing: border-box;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          /* Remove any max-width constraints if they exist */
+          max-width: none;
+        }
+        
+        .venue-feature {
+          background: rgba(0,242,254,0.05);
+          border-radius: 10px;
+          padding: 30px;
+          margin: 10px 0;
+          transition: all 0.3s ease;
+          border: 1px solid rgba(79,172,254,0.1);
+        }
+    
+
+        .about-card {
+          background: rgba(10,25,47,0.8);
+          border: 1px solid rgba(79,172,254,0.2);
+          border-radius: 20px;
+          padding: 20px;
+          margin: 0;
+          width: 94vw;
+          box-sizing: border-box;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          max-width: none;
+          margin-bottom: 30px; /* Keep this if you still want spacing between cards */
+        }
+
+}
+
+
+
+
+
+
+
+/* Mobile adjustments */
+
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+font-size: 1.1rem;
+}
+
+  .team-member-img {
+    width: 200px;
+    height: 200px;
+  }
+  .about-feature, .sponsor-card, .team-card {
+    padding: 10px;
+  }
+  .prize-amount {
+    font-size: 1.5rem;
+  }
+
+  .prize-card {
+margin: 10px 0; /* Adds space between cards vertically */
+width: calc(100% - 10px); 
+}
+
+  .architectural-bg {
+    background-size: 180%; 
+    background-position: center 47%; 
+    opacity: 0.3;
+  }
+
+  .logo-container img {
+    max-height: 30px; /* Smaller screens */
+    }
+
+  
+
+
+
+
+    .venue-card {
+      background: rgba(10,25,47,0.8);
+      border: 1px solid rgba(79,172,254,0.2);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 0;
+      width: 95vw; /* Use viewport width */
+      box-sizing: border-box;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      /* Remove any max-width constraints if they exist */
+      max-width: none;
+    }
+    
+    .venue-feature {
+      background: rgba(0,242,254,0.05);
+      border-radius: 10px;
+      padding: 30px;
+      margin: 10px 0;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(79,172,254,0.1);
+    }
+
+
+
+    .about-card {
+      background: rgba(10,25,47,0.8);
+      border: 1px solid rgba(79,172,254,0.2);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 0;
+      width: 94vw;
+      box-sizing: border-box;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: none;
+      margin-bottom: 30px; /* Keep this if you still want spacing between cards */
+    }
+
+
+}
+
+
+  
+    
+/* Medium screens (tablets and small laptops) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .hero h1 {
+  font-size: 3rem;
+  }
+  .hero-content p {
+  font-size: 1.2rem;
+  }
+  .register-btn {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  }
+  .tab-pane {
+  padding: 12px;
+  }
+  .team-member-img {
+  width: 180px;
+  height: 180px;
+  }
+  .team-member-contact a {
+  font-size: 1rem;
+  }
+  }
+  
+
+
+
+  /* Desktops */
+  @media (min-width: 993px) and (max-width: 1200px) {
+  .hero h1 {
+  font-size: 3.5rem;
+  }
+  .hero-content p {
+  font-size: 1.4rem;
+  }
+  .register-btn {
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  }
+  .tab-pane {
+  padding: 14px;
+  }
+  .team-member-img {
+  width: 200px;
+  height: 200px;
+  }
+  .team-member-contact a {
+  font-size: 1.1rem;
+  }
+  }
+
+
+  @media (max-width: 1024px) {
+    .hero h1 {
+      font-size: 3.5rem;
+    }
+    .about-feature, .sponsor-card, .team-card {
+      margin: 5px;
+      padding: 15px;
+    }
+  }
+
+  
+
+  /* Extra-large desktops */
+  @media (min-width: 1201px) {
+  .hero h1 {
+  font-size: 4rem;
+  }
+  .hero-content p {
+  font-size: 1.6rem;
+  }
+  .register-btn {
+  padding: 16px 32px;
+  font-size: 1.3rem;
+  }
+  .tab-pane {
+  padding: 16px;
+  }
+  .team-member-img {
+  width: 220px;
+  height: 220px;
+  }
+  .team-member-contact a {
+  font-size: 1.2rem;
+  }
+  }
+  
+  
+/* Media query for very small mobile devices */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.35rem;
+    margin-top: 40px;  /* Smallest font size for very small screens */
+  }
+  
+
+}
+  

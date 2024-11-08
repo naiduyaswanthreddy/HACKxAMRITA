@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Setup -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HackxAmrita 1.0</title>
+  <link rel="icon" href="pra.ico" type="image/x-icon">
+
+
+
+  <!-- CSS Libraries for Styling and Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+  
+
+
+  <!-- Hero Section -->
+  <div class="cyber-grid"></div>
+  <div class="hero">
+  
+  <!-- =======================================================- hamburger-menu  ===============================-->
+
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars" id="menuIcon"></i> <!-- Font Awesome bars icon -->
+  </div>
+  
+  
+    <!-- Logo Container for HACKxAMRITA -->
+    <div class="logo-container" style="position: absolute; top: 30px; right: 20px; z-index: 100;">
+      <img src="logo.png" alt="HACKxAMRITA Logo" />
+    </div>
+  
+  
+   <!-- Background Space Elements -->
+    <div class="space-background">
+      <!-- First Rocket -->
+      <div class="rocket rocket-1 rocket-1-style">
+        <svg viewBox="0 0 120 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Rocket body, fins, and exhaust flames similar to before -->
+          <path d="M60 10C60 20 70 60 60 120C50 60 60 20 60 10Z" fill="var(--primary-color)" />
+          <path d="M55 30C50 100 70 100 65 30Z" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M40 100L20 130L40 150" fill="var(--primary-color)" stroke="var(--primary-color)" stroke-width="1.5"/>
+          <path d="M80 100L100 130L80 150" fill="var(--primary-color)" stroke="var(--primary-color)" stroke-width="1.5"/>
+          <circle cx="60" cy="70" r="8" fill="var(--accent-color)" stroke="var(--primary-color)" stroke-width="1.5"/>
+          <path d="M60 140C58 145, 52 155, 60 160C68 155, 62 145, 60 140Z" fill="orange" opacity="0.8" />
+          <path d="M55 140C53 145, 48 155, 55 158C62 155, 57 145, 55 140Z" fill="yellow" opacity="0.8" />
+          <path d="M65 140C63 145, 68 155, 65 158C72 155, 67 145, 65 140Z" fill="yellow" opacity="0.8" />
+        </svg>
+      </div>
+  
+  
+  
+      
+      
+      <!-- Second Rocket -->
+      <div class="rocket rocket-2 rocket-2-style">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.5C12 2.5 16 6.5 16 12.5C16 18.5 12 22.5 12 22.5" stroke="var(--secondary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 2.5C12 2.5 8 6.5 8 12.5C8 18.5 12 22.5 12 22.5" stroke="var(--secondary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 2.5V22.5" stroke="var(--secondary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 18.5C16.1421 18.5 19.5 15.8137 19.5 12.5C19.5 9.18629 16.1421 6.5 12 6.5C7.85786 6.5 4.5 9.18629 4.5 12.5C4.5 15.8137 7.85786 18.5 12 18.5Z" fill="var(--accent-color)" stroke="var(--secondary-color)" stroke-width="1.5"/>
+        </svg>
+      </div>
+  
+    </div>
+  
+  
+  
+  
+  
+    <div class="architectural-bg"></div>
+    <div class="hero-content">
+
+        <!-- Main Content in Hero Section -->
+      <h1 class="animate__animated animate__fadeIn">HACKxAMRITA 1.0</h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Build, innovate, and shine – your next big idea starts here!</p>
+
+      <!-- <p class="animate__animated animate__fadeIn animate__delay-1s">Join us for 6 hours of innovation, creativity, and coding!</p> -->
+      <p class="animate__animated animate__fadeIn animate__delay-2s">
+        <strong>November 18th , 2024</strong> <br>| Ignite , Inspire |  Prachurya |
+      </p>
+  
+  
+  
+      <div id="countdown" class="countdown-timer"></div>
+      <!-- <a href="Google Sheet.html"  id="register-btn" class="register-btn animate__animated animate__fadeIn animate__delay-3s">Register Now</a> -->
+      <a href=""  id="register-btn" class="register-btn animate__animated animate__fadeIn animate__delay-3s">Registrations closed</a>
+
+  
+   <!-- Countdown Display for Registration Ending -->
+
+      <!-- <div id="countdown">
+        <p id="blast-off">Registrations Ends In</p> -->
+
+        <!-- <div class="time-section">
+            <div class="time-unit">
+                <span id="days">0</span>
+                <p>days</p>
+            </div>
+            <span class="colon"><strong>:</strong></span>
+            <div class="time-unit">
+                <span id="hours">0</span>
+                <p>hours</p>
+            </div>
+            <span class="colon"><strong>:</strong></span>
+            <div class="time-unit">
+                <span id="minutes">0</span>
+                <p>minutes</p>
+            </div>
+            <span class="colon"><strong>:</strong></span>
+            <div class="time-unit">
+                <span id="seconds">0</span>
+                <p>seconds</p>
+            </div>
+        </div>
+    </div> -->
+  
+      
+           <!-- Scroll Down Indicator -->
+
+      <div class="scroll-indicator">
+        <span class="scroll-text">Scroll Down</span>
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+          <path d="M12 18l-8-8h6V0h4v10h6z" fill="var(--primary-color)"/>
+        </svg>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <!-- ============================================== Hamburger ================================================== -->
+
+
+
+  
+  <div id="dropdownMenu" class="dropdown-menu">
+    <ul class="nav flex-column">
+      <br>
+      <br>
+      <li class="nav-item">
+        <a class="nav-link" href="#about" data-bs-toggle="tab" onclick="navigateAndCloseMenu('#about')">
+          <i class="bi bi-info-circle" style="margin-right: 8px;"></i> About
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#schedule" data-bs-toggle="tab" onclick="navigateAndCloseMenu('#schedule')">
+          <i class="bi bi-calendar-event" style="margin-right: 8px;"></i> Schedule
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#prizes" data-bs-toggle="tab" onclick="navigateAndCloseMenu('#prizes')">
+          <i class="bi bi-trophy" style="margin-right: 8px;"></i> Prizes
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sponsors" data-bs-toggle="tab" onclick="navigateAndCloseMenu('#sponsors')">
+          <i class="bi bi-people" style="margin-right: 8px;"></i> Crew
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#team-lineup" data-bs-toggle="tab" onclick="navigateAndCloseMenu('#team-lineup')">
+          <i class="bi bi-people-fill" style="margin-right: 8px;"></i> Team Lineup
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#venue" data-bs-toggle="tab" onclick="navigateAndCloseMenu('#venue')">
+          <i class="bi bi-geo-alt" style="margin-right: 8px;"></i> Venue
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Problem" data-bs-toggle="tab" onclick="navigateAndCloseMenu('#Problem')">
+          <i class="bi bi-lightbulb" style="margin-right: 8px;"></i> Problem Statements
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#rules" data-bs-toggle="tab" onclick="navigateAndCloseMenu('#rules')">
+          <i class="bi bi-journal-text" style="margin-right: 8px;"></i> Rules
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#faq" data-bs-toggle="tab" onclick="navigateAndCloseMenu('#faq')">
+          <i class="bi bi-question-circle" style="margin-right: 8px;"></i> FAQ
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+  
+  <!-- Navigation -->
+  <ul class="nav nav-tabs justify-content-center mx-auto my-4 container" id="tabMenu">
+    <li class="nav-item"><a class="nav-link active" href="#about" data-bs-toggle="tab">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="#schedule" data-bs-toggle="tab">Schedule</a></li>
+    <li class="nav-item"><a class="nav-link" href="#prizes" data-bs-toggle="tab">Prizes</a></li>
+    <li class="nav-item"><a class="nav-link" href="#sponsors" data-bs-toggle="tab">Crew</a></li>
+    <li class="nav-item"><a class="nav-link" href="#team-lineup" data-bs-toggle="tab">Team Lineup 🏆</a></li>
+  
+    <li class="nav-item"><a class="nav-link" href="#venue" data-bs-toggle="tab">Venue</a></li>
+    <li class="nav-item"><a class="nav-link" href="#Problem" data-bs-toggle="tab">Problem Statements</a></li>
+    <li class="nav-item d-none d-md-block" id="rulesTab"><a class="nav-link" href="#rules" data-bs-toggle="tab">Rules</a></li> <!-- Hidden on mobile, visible on tablets and larger screens -->
+
+    <li class="nav-item"><a class="nav-link" href="#faq" data-bs-toggle="tab">FAQ</a></li>
+    <button id="seeMoreBtn" class="see-more-btn d-md-none">See More</button> <!-- Changed the class name -->
+  </ul>
+  
+
+
+
+
+
+  <div class="tab-content container">
+  
+  
+
+    
+
+      <!---------------------------------------------------  About Tab ------------------------------------------------->
+
+      <div class="tab-pane fade content-section active show" id="about">
+        <div class="about-card">
+  
+  <!-- Event Details and Information -->
+  
+
+          <h6>Registration Deadline : 4th Nov</h6>
+          <br>
+          <h2 class="mb-4">About HACKxAMRITA 1.0 </h2>
+          <p class="lead mb-5">
+            Welcome to HACKxAMRITA 1.0 – where creativity meets code, and ideas turn into action! Hosted by the Prachurya Club at Amrita Vishwa Vidyapeetham, Amaravati, this 6-hour hackathon is more than just a coding event; it’s an electrifying experience of innovation, teamwork, and pure adrenaline as we create, connect, and compete!
+          </p>
+      
+  
+          <h3 class="mt-5 mb-3">What’s the Ideal Team Size?</h3>
+  
+          <p>To make sure you have a balanced and collaborative experience, teams should have <strong>3-6 members</strong> </p>
+          
+  
+          <h3 class="mt-5 mb-3">Why HACKxAMRITA 1.0? </h3>
+  
+          <p>
+            Imagine diving into a high-energy room buzzing with excitement, where like-minded students come together to solve challenges, build cool tech, and make something amazing happen – all in just a few hours! HACKxAMRITA 1.0 is the perfect launchpad for students who want to:
+          </p>
+          <p><strong>Build Real Projects </strong>: Get hands-on experience turning ideas into working prototypes with code, strategy, and creativity.</p>
+          <p><strong>Grow Your Portfolio </strong>: Showcase your skills and boost your portfolio with projects that stand out in interviews, internships, and beyond.</p>
+          <p><strong>Meet Future Collaborators </strong>: Network with other ambitious students, tech enthusiasts, and mentors who share your passion.</p>
+          <p><strong>Win Exciting Prizes </strong>: Compete for top prizes and earn well-deserved recognition from our tech community.</p>
+      
+          <h3 class="mt-5 mb-3">What to Expect!</h3>
+          <p>
+            Get ready to dive into an exhilarating day of innovation! The challenge themes will be revealed two days before the event, giving you a sneak peek to ignite your imagination and spark creativity. When the hackathon begins, it’s all hands on deck! Roll up your sleeves and jump straight into project mode—over the next six hours, you and your team will brainstorm, code, experiment, troubleshoot, and most importantly, have a blast working together.        </p>
+          <p>
+            New to hackathons? No worries! Our team will be there to cheer you on, ensuring you have a fantastic time and enjoy the collaborative spirit of the event. It’s all about learning, experimenting, and having fun as you connect with fellow participants and unleash your creativity!        </p>
+          <p>
+            Throughout the hackathon, judges will stop by to check in with each team, getting a glimpse of your progress, creativity, and dedication. As the event comes to a close, we’ll wrap up with an exciting prize distribution ceremony—a chance to celebrate your hard work, innovation, and maybe even claim a prize and some serious bragging rights!
+          </p>
+      
+          <h3 class="mt-5 mb-3">Who Can Join? </h3>
+          <p>
+            This event is for all students of Amrita Vishwa Vidyapeetham, Amaravati. Whether you’re a first-timer curious to learn coding basics or a seasoned coder ready to conquer, HACKxAMRITA 1.0 is designed for everyone!
+          </p>
+      
+          <h3 class="mt-5 mb-3">Get Ready to:</h3>
+          <ul>
+            <li><strong>Unleash Your Creativity </strong>: Break out of the usual routines and think outside the box!</li>
+            <li><strong>Learn New Skills </strong>: Explore the latest tools, technologies, and coding languages with support from mentors.</li>
+            <li><strong>Build, Break, and Create </strong>: Whether your project idea is big or small, this is your chance to bring it to life.</li>
+            <li><strong>Make New Friends </strong>: Join a community of students who are just as excited about tech and innovation as you are.</li>
+          </ul>
+      
+          <h3 class="mt-5 mb-3">Join Us for HACKxAMRITA 1.0!</h3>
+          <p>
+            Don’t miss out on this unforgettable experience! Come as you are, with just a laptop, some enthusiasm, and an open mind. Join the Prachurya Club’s HACKxAMRITA 1.0 to create something epic, sharpen your skills, and kickstart your journey into the exciting world of hackathons. This isn’t just a coding event – it’s a celebration of tech, teamwork, and pushing boundaries.
+          </p>
+        </div>
+      </div>
+      
+  
+  
+    <!--=------------------====================----------------Schedule Tab -------------================------------------->
+  
+    <div class="tab-content container my-5">
+      <!-- Schedule Tab -->
+      <div class="tab-pane fade" id="schedule">
+        <div class="schedule-container">
+          <h2 class="mb-4">Event Schedule</h2>
+          <div id="schedule-list"></div>
+          <button id="showMore" class="btn register-btn mt-4">Show Full Schedule</button>
+        </div>
+      </div>
+    
+        
+        
+    <!-----------------------------------------------------  Prizes Tab ---------------------------------------------->
+  
+          <div class="tab-pane fade content-section" id="prizes">
+            <h2 class="text-center mb-4">Amazing Prizes</h2>
+            <div class="row justify-content-center">
+              <!-- First Place -->
+              <div class="col-md-4">
+                <div class="prize-card text-center">
+                  <br>
+                  <br>
+                  <h3>🏆 First Place</h3>
+                  <!--  <p>Best (Idea + Backend + UI/UX design)</p> Winning category description -->
+                  <h3>Grand Hackathon Winner</h3>
+                  <div class="prize-amount">₹3,000</div>
+                </div>
+              </div>
+              
+              <!-- Second Place -->
+              <div class="col-md-4">
+                <div class="prize-card text-center">
+                  <br>
+                  <br>
+                  <h3>🥈 Second Place</h3>
+                 <!--  <p>Best (Backend + UI/UX design)</p>  Winning category description -->
+                  <h3>Innovation Grand Winner</h3>
+                  <div class="prize-amount">₹2,000</div>
+                </div>
+              </div>
+              
+              <!-- Third Place -->
+              <div class="col-md-4">
+                <div class="prize-card text-center">
+                  <br>
+                  <br>
+                  <h3>🥉 Third Place</h3>
+                 <!--  <p>Best (Idea + UI/UX design)</p> Winning category description -->
+                  <h3>UI/UX Grand Winner</h3>
+                  <div class="prize-amount">₹1,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+  
+  
+  
+      
+        <!------------------------------------------------ Crew Tab ------------------------------------------------------>
+
+        <div class="tab-pane fade content-section" id="sponsors">
+          <div class="team-section">
+            <h2 class="text-center mb-5">HackxAmrita Crew</h2>
+            <div class="row justify-content-center">
+              
+              <!-- Team Member 1 -->
+              <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                  <img src="picpj.jpg" alt="Team Member 1" class="team-member-img">
+                  <h3 class="team-member-name">Prajwala</h3>
+                  <div class="team-member-position">Event Organizer Lead</div>
+                  <div class="team-member-contact">
+                    <a href="mailto:av.en.u4cse22248@av.students.amrita.edu">📧 Mail ID</a>
+                    <a href="https://www.linkedin.com/in/prajwala-yadlapalli/" target="_blank" class="d-block">🔗 LinkedIn Profile</a>
+  
+                    <a href="tel:+919866622602">📱+91 9866622602</a>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Team Member 2 -->
+              <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                  <img src="picya.jpg" alt="Team Member 2" class="team-member-img">
+                  <h3 class="team-member-name">Yaswanth Reddy</h3>
+                  <div class="team-member-position">Technical Lead</div>
+                  <div class="team-member-contact">
+                    <a href="mailto:av.en.u4cse22129@av.students.amrita.edu">📧 Mail ID</a>
+                    <a href="https://www.linkedin.com/in/naidu-yaswanth-reddy" target="_blank" class="d-block">🔗 LinkedIn Profile</a>
+  
+                    <a href="tel:+917207171544">📱 +91 7207171544</a>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Team Member 3 -->
+              <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                  <img src="picsri.jpg" alt="Team Member 3" class="team-member-img">
+                  <h3 class="team-member-name">Sri Vatsal</h3>
+                  <div class="team-member-position">Event Manager </div>
+                  <div class="team-member-contact">
+                    <a href="mailto:av.en.u4cse22131@av.students.amrita.edu">📧 Mail ID</a>
+                    <a href="https://www.linkedin.com/in/parisesv" target="_blank" class="d-block">🔗 LinkedIn Profile</a>
+  
+                    <a href="tel:9666559437">📱 +91 9666559437</a>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Team Member 4 -->
+              <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                  <img src="picoj.jpg" alt="Team Member 4" class="team-member-img">
+                  <h3 class="team-member-name">Ojas</h3>
+                  <div class="team-member-position">Participant Engagement Lead</div>
+                  <div class="team-member-contact">
+                    <a href="mailto:av.en.u4cse22125@av.students.amrita.edu">📧 Mail ID</a>
+                    <a href="https://www.linkedin.com/in/ojas-madineni-61baa2276" target="_blank" class="d-block">🔗 LinkedIn Profile</a>
+  
+                    <a href="tel:9912058499">📱 +91 9912058499</a>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+
+  
+  
+              <!------------------------------------------ Team Lineup  tab🏆------------------------------------- -->
+  
+        <div class="tab-pane fade content-section" id="team-lineup">
+          <div class="venue-card glow-box">
+            <h2 class="text-center mb-4">Team Lineup 🏆</h2>
+            <p class="lead text-center">Check out the competition! Here’s the live lineup of team names—grab a unique one before it’s taken!</p>
+            
+            <!-- Team Lineup Table -->
+            <table class="table text-start">
+              <thead>
+                <tr>
+                  <th scope="col">Team No</th>
+                  <th scope="col">Team Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Code Blue</td></tr>
+                <tr><td>2</td><td>The Achievers</td></tr>
+                <tr><td>3</td><td>Wolftopia</td></tr>
+                <tr><td>4</td><td>Ameya</td></tr>
+                <tr><td>5</td><td>Code Crafters</td></tr>
+                <tr><td>6</td><td>Quantum-Crew</td></tr>
+                <tr><td>7</td><td>Tech Trio</td></tr>
+                <tr><td>8</td><td>Tech Titans</td></tr>
+                <tr><td>9</td><td>TECHTREK</td></tr>
+                <tr><td>10</td><td>KSRT</td></tr>
+                <tr><td>11</td><td>HackXplorers</td></tr>
+                <tr><td>12</td><td>THE 6 CHAOS</td></tr>
+                <tr><td>13</td><td>NEMESIS</td></tr>
+                <tr><td>14</td><td>Quantum coders</td></tr>
+                <tr><td>15</td><td>Logical Tragedy squad</td></tr>
+                <tr><td>16</td><td>Sagittarius</td></tr>
+                <tr><td>17</td><td>The Ciphers</td></tr>
+                <tr><td>18</td><td>Geek Navi</td></tr>
+                <tr><td>19</td><td>Elevate</td></tr>
+                <tr><td>20</td><td>AI AVENGERS</td></tr>
+                <tr><td>21</td><td>The Innovators </td></tr>
+                <tr><td>22</td><td>Byte Busters</td></tr>
+                <tr><td>23</td><td>Bug Busters </td></tr>
+                <tr><td>24</td><td>Sparklers</td></tr>
+                <tr><td>25</td><td>Cyber Samurai</td></tr>
+                <tr><td>26</td><td>white dragon</td></tr>
+                <tr><td>27</td><td>Tech Mafia </td></tr>
+                <tr><td>28</td><td>LOOSERS</td></tr>
+                <tr><td>29</td><td>Web Wonders</td></tr>
+                <tr><td>30</td><td>Sunshine</td></tr>
+                <tr><td>31</td><td>Skibidi Rizzlers</td></tr>
+                <tr><td>32</td><td>Web Wizards</td></tr> 
+                <tr><td>33</td><td>Binary Beasts</td></tr>
+                <tr><td>34</td><td>INNOVATORS</td></tr>
+                <tr><td>35</td><td>The Power Hackers</td></tr>
+                <tr><td>36</td><td>Rookie Coders</td></tr>
+                <tr><td>37</td><td>Dridha</td></tr>
+                <tr><td>38</td><td>AI Masters</td></tr>
+                <tr><td>39</td><td>Samaras</td></tr>
+                <tr><td>40</td><td>Extreme Encoders</td></tr>
+                <tr><td>41</td><td>TechAvengers</td></tr>
+                <tr><td>42</td><td>Hugs for Bugs</td></tr>
+                <tr><td>43</td><td>TechSprint</td></tr>
+                <tr><td>44</td><td>Hackathon Hive</td></tr>
+                <tr><td>45</td><td>Unicorn</td></tr>
+                <tr><td>46</td><td>Team Hackathon</td></tr>
+                <tr><td>47</td><td>TechAlchemists</td></tr>
+                <tr><td>48</td><td>Prometheus</td></tr>
+                <tr><td>49</td><td>BitByBit</td></tr>
+                <tr><td>50</td><td>CODE CREW</td></tr>            
+                <tr><td>51</td><td>THE HACKONAUTS</td></tr>               
+                <tr><td>52</td><td>V5</td></tr>   
+                <tr><td>53</td><td>Ultimate</td></tr>
+                <tr><td>54</td><td>Sravan</td></tr>
+                <tr><td>55</td><td>Squad Anons</td></tr> 
+                <tr><td>56</td><td>Hack Attack</td></tr>
+                <tr><td>57</td><td>ERROR 404</td></tr>
+                <tr><td>58</td><td>Tech Risers</td></tr>              
+                <tr><td>59</td><td>CodeCrushers</td></tr>         
+                <tr><td>60</td><td>WebHex</td></tr>               
+                <tr><td>61</td><td>Shakti</td></tr>   
+                <tr><td>62</td><td>PRAGATI</td></tr>             
+                <tr><td>63</td><td>Byte Bits</td></tr>     
+                <tr><td>64</td><td>Nemesis</td></tr>    
+                <tr><td>65</td><td>The Hacktivatorz</td></tr> 
+                
+              
+                <tr><td>66</td><td>HackerStreet</td></tr>
+  
+  
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+  
+  
+  
+  
+         <!--------------------------------------------------- Venue Tab ----------------------------------------------------->
+  
+ 
+  <div class="tab-pane fade content-section" id="venue">
+      <div class="venue-card">
+        <h2 class="text-center mb-4">Venue</h2>
+        <!-- <p class="lead text-center mb-5">Join us at our state-of-the-art campus facility</p> -->
+        
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="venue-feature text-center">
+  
+  
+  
+  
+              <!-- <div class="venue-icon mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 2H5C3.346 2 2 3.346 2 5v14c0 1.654 1.346 3 3 3h14c1.654 0 3-1.346 3-3V5c0-1.654-1.346-3-3-3zm0 16H5V5h14v13z"/>
+                  <path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/>
+                </svg>
+              </div> -->
+  
+  
+  
+              <!-- <h3>Academic Block</h3>
+              <div class="venue-details mt-3">
+                <p class="venue-floor">3rd Floor</p>
+                <p class="venue-description">A spacious, modern environment equipped with all necessary facilities to foster innovation and collaboration.</p>
+              </div>
+              <div class="venue-facilities mt-4">
+                <div class="facility-item">
+                  <span>🖥️ High-Speed Internet</span>
+                </div>
+                <div class="facility-item">
+                  <span>⚡ Power Outlets</span>
+                </div>
+  
+              </div> -->
+  
+  
+  
+  
+               <br>
+               <br>
+               <br>
+               <br>
+  
+  
+             <h3>Stay Tuned..!</h3> 
+  
+                <br>
+                <br>
+                <br>
+                <br>
+
+  
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <!---------------------------------------------------- Problem Statements Tab  -------------------------------------------->
+  
+  
+  
+  
+    <!-- Problem Statements Section -->
+  <div class="tab-pane fade content-section" id="Problem">
+    <div class="venue-card">
+      <h2 class="text-center mb-4">Problem Statements</h2>
+      
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="venue-feature text-center">
+            
+
+            <!-- Countdown Timer Display -->
+            <div id="countdown2" class="countdown-timer2"></div>
+            <!-- <h3>Stay Tuned..!</h3> -->
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+      
+        <!----------------------------------------------------- FAQ Tab ------------------------------------------------->
+  
+  
+  
+        <div class="tab-pane fade content-section" id="faq">
+          <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+          <div class="accordion" id="faqAccordion">
+      
+              <!-- Question 1 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                          What is HACKxAMRITA 1.0 Hackathon, and who can join in on the fun? 
+                      </button>
+                  </h2>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          HACKxAMRITA 1.0 is a 6-hour coding adventure open to all students of Amrita Vishwa Vidyapeetham, Amaravati! It’s a space for curious minds and coding fans to team up, create, and solve real-world challenges. Come with your ideas and leave with new friends and skills! 
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Question 2 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                          Do I need to be a coding genius to participate? 
+                      </button>
+                  </h2>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          Not at all! Everyone is welcome, from newbies to coding pros. This hackathon is a friendly, supportive environment for learning, where even coding beginners can jump right in! 
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Question 3 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                          What’s in it for me if I participate? 
+                      </button>
+                  </h2>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          By joining, you’ll gain hands-on coding experience, boost teamwork and time management skills, and build a portfolio that makes you shine in interviews and competitions! And don’t forget the memories and friends you’ll make! 
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Question 4 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                          What should I pack for this hackathon adventure? 
+                      </button>
+                  </h2>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          Bring your laptop, charger, and any other essential tech gear. A notebook might be handy for jotting down ideas or sketching out plans! 
+                      </div>
+                  </div>
+              </div>
+  
+  
+  
+  
+  <!-- Question 17 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq17">
+        Do we need to submit just the proposed idea or a working model?
+      </button>
+    </h2>
+    <div id="faq17" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        You’ll need to submit a working model, not just an idea! The goal of HACKxAMRITA 1.0 is to bring your concept to life through a functional prototype or project. We want to see your ideas in action!
+      </div>
+    </div>
+  </div>
+  
+  
+      
+              <!-- Question 5 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                          Are there prizes up for grabs, and what’s the cost to join?
+                      </button>
+                  </h2>
+                  <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          Absolutely! Top teams will win awesome prizes, and every participant receives a certificate. And here’s the best part: it’s free to participate! Thanks to our college management for the support! 
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Question 6 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                          Can I participate solo or do I need a team? 
+                      </button>
+                  </h2>
+                  <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        Hackathons are usually team-based events, with teams typically consisting of 3 to 6 members.
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Question 7 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                          Who can I contact if I have questions? 
+                      </button>
+                  </h2>
+                  <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          For any questions or additional info, feel free to reach out to our organizing team: <br>
+                          Prajwala Yadlapalli - +91 9866622602 <br>
+                          Naidu Yaswanth Reddy - +91 7207171544 <br>
+                          Parise Sri Vatsal - +91 9666559437 <br>
+                          Ojas Vardhan Madineni - +91 9912058499 <br>
+                          They’re here to help you with all your hackathon-related questions!
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Question 8 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                          What’s Prachurya Club, and what’s it all about? 
+                      </button>
+                  </h2>
+                  <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          Prachurya Club is a vibrant student-led club at Amrita Vishwa Vidyapeetham, Amaravati, where we dive into cybersecurity, tech, and creativity! We host hackathons, coding workshops, and tech talks—basically, if it’s techy and fun, we’re in! 
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Question 9 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                          How can I become a part of Prachurya Club, and does it cost anything?
+                      </button>
+                  </h2>
+                  <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          Joining is easy and free! You can sign up during our membership drives. If you’re excited about tech and innovation, you’ll fit right in! 
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Question 10 -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                          What’s in it for Prachurya Club members? 
+                      </button>
+                  </h2>
+                  <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          Members get hands-on experience with tech projects, expand their professional network, and build valuable skills. Plus, you’ll have chances to lead events and propose your own project ideas! 
+                      </div>
+                  </div>
+              </div>
+      
+  <!-- Question 11 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+            Do I need tech skills to join Prachurya Club? 
+        </button>
+    </h2>
+    <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+            Not at all! We love techies of all levels, from absolute beginners to coding wizards. Our events and workshops are for everyone, so whether you’re here to learn or lead, you’re welcome!
+        </div>
+    </div>
+  </div>
+  
+  <!-- Question 12 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+            How do I register my team?
+        </button>
+    </h2>
+    <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+            It’s easy! Just gather the required details for each team member (name, registration ID, email, etc.), then click the Register Now button on our website to fill out the form. Don’t wait too long—registrations close on 4th Nov 2024 at 11:59 p.m. So rally your team and sign up soon!
+        </div>
+    </div>
+  </div>
+  
+  <!-- Question 13 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+            Can I join more than one team?
+        </button>
+    </h2>
+    <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+            Nope! Each participant can be part of only one team. Pick your squad and give it your all—this way, everyone can dive in and fully support their team’s project!
+        </div>
+    </div>
+  </div>
+  
+  <!-- Question 14 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+            Can we submit more than one idea?
+        </button>
+    </h2>
+    <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+            Great question! Each team can submit just one idea for the hackathon. So, bring your best concept forward, focus on making it amazing, and wow the judges with a standout project!
+        </div>
+    </div>
+  </div>
+  
+  <!-- Question 15 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+            Can I form a team with members from different branches or years?
+        </button>
+    </h2>
+    <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+            Absolutely! We encourage creativity and collaboration, so cross-section, cross-branch, and cross-year team formations are not only allowed but welcomed! Whether you're teaming up with friends from different disciplines or mixing it up with seniors or juniors, this is a great way to bring diverse perspectives to your projects. Let's innovate together!
+        </div>
+    </div>
+  </div>
+  
+  
+      
+              <!-- Question 16-->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                          How does Prachurya Club support my career goals? 
+                      </button>
+                  </h2>
+                  <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                          Prachurya helps you build a standout portfolio with project experience and keeps you up-to-date on industry trends. It’s the perfect way to build confidence and skills for interviews and future tech careers! 
+                      </div>
+                  </div>
+              </div>
+      
+          </div>
+      </div>
+      
+  
+  
+
+<!-- ================================================= Rules Tab Content =====================================-->
+
+
+
+
+
+  
+  
+<div class="tab-pane fade content-section" id="rules">
+  <div class="venue-card">
+    <h2 class="text-center mb-4">Rules and Guidelines</h2>
+
+          <p><strong>Team Formation :  </strong> Teams of 3-6 members are allowed, with cross-branch, cross-year, and interdisciplinary team formations encouraged.</p>
+          
+          <p><strong>Project Alignment :  </strong> Projects must align with the given themes or problem statements and follow event guidelines.</p>
+          
+          <p><strong>Hackathon Schedule :  </strong> The hackathon begins on 16th November at 8:00 p.m. when problem statements are released. Final project submission is due by 3:30 p.m. on 18th November. No edits allowed after this deadline.</p>
+          
+          <p><strong>Original Work :  </strong> All code must be original and developed during the hackathon. Exact replicas of any already existing websites are strictly prohibited, whereas solutions with changes and additional features are encouraged (open-source libraries, frameworks, and GPT tools are allowed).</p>
+          
+          <p><strong>Deployment :  </strong> Projects must be locally deployed and should not rely on direct-use software or pre-built platforms for primary functionality. Direct deployment on tools like website builders or no-code platforms is prohibited. All code should be developed and run independently to demonstrate original work.</p>
+          
+          <p><strong>Independence :  </strong> Each team must work independently; cross-team collaboration is prohibited. Mentors and organizers are available for guidance.</p>
+          
+          <p><strong>Project Presentation :  </strong> At the hackathon’s end, each team will present its project, showcasing functionality, features, and innovations.</p>
+          
+          <p><strong>Judging Criteria :  </strong> Judging will consider innovation, technical implementation, user experience, scalability, and theme relevance. The judges' decision is final.</p>
+          
+          <p><strong>Project Ownership :  </strong> Participants retain full ownership of their projects, though selected projects may be showcased by organizers.</p>
+          
+          <p><strong>Submission Deadline :  </strong> Teams must submit all code and documentation by the deadline. Late submissions may result in disqualification.</p>
+          
+          <p><strong>Post-Event Sharing :  </strong> Post-event, participants may share projects with the wider community (e.g., on GitHub).</p>
+          
+          <p><strong>Code of Conduct :  </strong> All participants must adhere to a code of conduct promoting inclusivity, respect, and professionalism.</p>
+          
+          <p><strong>Media Use Consent :  </strong> By participating, you consent to media use of photos, videos, or project details by organizers for promotional purposes.</p>
+          
+          <p><strong>Liability :  </strong> Organizers hold no liability for damages, losses, or injuries. Participants are responsible for their own safety and equipment.</p>
+          
+          <p><strong>Dispute Resolution :  </strong> Any disputes will be resolved through the organizers’ final decisions. Rule changes may occur and will be promptly communicated to all.</p>
+  
+  </div>
+</div>
+
+
+
+
+
+  
+  <!--------------------=================------------------------ Footer ------------------================------------------>
+
+  <footer class="footer-section">
+      <div class="cyber-grid-footer"></div>
+      <div class="container">
+        <div class="row g-4">
+          <!-- Logo and Description -->
+          <div class="col-lg-4 mb-4">
+            <div class="footer-brand">
+              <h3 class="gradient-text">HACKxAMRITA 1.0</h3>
+              <p class="mt-3">Join us for 6 hours of innovation, creativity, and coding! Transform your ideas into reality.</p>
+            </div>
+            <div class="social-links mt-4">
+              <li><a href="https://www.instagram.com/prachurya_avv/profilecard/?igsh=M3prZmpvejExNWo3" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/prachurya/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://discord.gg/YphRT5cq" target="_blank"><i class="fab fa-discord"></i></a></li>
+          </div>
+          
+          </div>
+  
+    
+    
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-4">
+            <h4 class="footer-title">Contact Us</h4>
+            <ul class="footer-links">
+              <li><i class="bi bi-envelope-fill"></i>prachuryaclub@av.amrita.edu</li>
+              <li><i class="bi bi-geo-alt-fill"></i> Amrita Vishwa Vidyapeetham , Amaravati</li>
+              <li><i class="bi bi-telephone-fill"></i> +91 7207171544</li>
+              <li><i class="bi bi-telephone-fill"></i> +91 9866622602</li>
+            </ul>
+          </div>
+    
+          <!-- Newsletter
+          <div class="col-lg-3 col-md-4">
+            <h4 class="footer-title">Stay Updated</h4>
+            <div class="newsletter-box">
+              <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" class="newsletter-input">
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div> -->
+    
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="mb-0">© 2024 HackxAmrita , Prachurya Tech Community . All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <a href="#" class="footer-bottom-link">Privacy Policy</a>
+              <a href="#" class="footer-bottom-link">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>  
+</body>
+</html>

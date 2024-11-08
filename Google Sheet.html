@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKxAMRITA 1.0 Registration</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+	
+    <link rel="stylesheet" href="Google Sheet.css">
+</head>
+<body class="bg-gray-900">
+
+
+
+
+
+
+
+
+	
+
+
+
+<div class="cyber-grid"></div>
+
+<div class="container flex justify-center items-center min-h-screen">
+	<div class="form-container">
+		<h4 class="text-2xl font-bold mb-6 text-center text-cyan-400">HACKxAMRITA 1.0 Registration</h4>
+		<p style="text-align: center;">Team Size: 3 - 6 members</p>
+		<br>
+
+		<form method="post" action="https://script.google.com/macros/s/AKfycbyGy8dDxikX93oCDiu6CemRsSe9Wfra3F3N6r9fCAV3WiyqE8sKzV-iB4JavLRum0Ka/exec" name="contact-form">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+				<input type="text" name="team-name" placeholder="Team Name *" class="input-field" required>
+				<input type="text" name="team-leader-name" placeholder="Team Leader Name *" class="input-field" required>
+				<input type="text" name="team-leader-regno" placeholder="Team Leader ID: AV.EN/SC.U4CSE/AIXXXXX *" class="input-field" required>
+				<input type="email" name="team-leader-email" placeholder="Team Leader College Email *" class="input-field" required>
+				<input type="text" name="team-leader-contact" placeholder="Team Leader Contact Number *" class="input-field" required>
+				<select name="team-leader-year" class="input-field" required>
+					<option value="">Team Leader Year of Study</option>
+					<option value="1">1st Year</option>
+					<option value="2">2nd Year</option>
+					<option value="3">3rd Year</option>
+				</select>
+				<select name="team-leader-department-branch" class="input-field" required>
+					<option value="">Team Leader Department of Study</option>
+					<option value="CSE">CSE</option>
+					<option value="AIE">AIE</option>
+					<option value="CCE">CCE</option>
+				</select>
+			</div>
+
+
+
+
+
+
+
+
+			<div class="mb-6">
+				<h5 class="text-lg font-semibold text-cyan-300">Member 1 Information</h5>
+
+				<!-- Mandatory Member 1 Details -->
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+
+					<input type="text" name="member1-name" placeholder="Member Name *" class="input-field" required>
+					<input type="text" name="member1-regno" placeholder="Member ID: AV.EN/SC.U4CSE/AIXXXXX *" class="input-field" required>
+					<input type="email" name="member1-email" placeholder="Member College Email *" class="input-field" required>
+					<input type="text" name="member1-contact" placeholder="Member Contact Number *" class="input-field" required>
+					<select name="member1-year" class="input-field" required>
+						<option value="">Member Year of Study</option>
+						<option value="1">1st Year</option>
+						<option value="2">2nd Year</option>
+						<option value="3">3rd Year</option>
+					</select>
+					<select name="member1-branch" class="input-field" required>
+						<option value="">Member Department of Study</option>
+						<option value="CSE">CSE</option>
+						<option value="AIE">AIE</option>
+						<option value="CCE">CCE</option>
+					</select>
+				</div>
+
+
+
+				<h5 class="text-lg font-semibold text-cyan-300">Member 2 Information</h5>
+				<!-- Mandatory Member 2 Details -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+
+					<input type="text" name="member2-name" placeholder="Member Name *" class="input-field" required>
+					<input type="text" name="member2-regno" placeholder="Member ID: AV.EN/SC.U4CSE/AIXXXXX *" class="input-field" required>
+					<input type="email" name="member2-email" placeholder="Member College Email *" class="input-field" required>
+					<input type="text" name="member2-contact" placeholder="Member Contact Number *" class="input-field" required>
+					<select name="member2-year" class="input-field" required>
+						<option value="">Member Year of Study</option>
+						<option value="1">1st Year</option>
+						<option value="2">2nd Year</option>
+						<option value="3">3rd Year</option>
+					</select>
+					<select name="member2-branch" class="input-field" required>
+						<option value="">Member Department of Study</option>
+						<option value="CSE">CSE</option>
+						<option value="AIE">AIE</option>
+						<option value="CCE">CCE</option>
+					</select>
+				</div>
+
+		
+
+				<!-- Container for additional members -->
+				<div id="additional-members"></div>
+			</div>
+
+
+			<div class="mb-4">
+				<input type="checkbox" id="confirmation" name="confirmation" required>
+				<label for="confirmation" class="text-white ml-2">
+					I confirm that all information provided about our team is accurate and truthful; I understand that any false information may result in disciplinary action by the management.
+				</label>
+			</div>
+
+			<div class="button-container">
+				<button type="button" id="add-member-btn" class="add-member-btn">Add Team Member</button>
+				<input type="submit" value="Submit Registration" class="submit-btn">
+			</div>
+			
+
+
+		</form>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+	
+<div class="loading-overlay" id="loadingOverlay">
+	<div class="loading-spinner"></div>
+	<p class="text-white mt-4">Hang tight! We're firing up the data rocket!...🚀</p>
+</div>
+
+<!-- Success Message -->
+<div class="success-message" id="successMessage">
+	<h2 class="text-2xl font-bold mb-4 text-cyan-400">Registration Successful!</h2>
+	<p class="text-white mb-4">
+		You're all set for <span class="highlighted-text">HACKxAMRITA 1.0 !</span> Keep an eye out for the problem statements—they'll be released soon. Get ready to bring your ideas to life!
+	</p>
+	<p class="text-white mb-4">
+		Stay connected and get real-time updates by following us on 
+		<a href="https://www.instagram.com/prachurya_avv/profilecard/?igsh=M3prZmpvejExNWo3" target="_blank" class="text-blue-400 hover:underline">Instagram</a>, 
+		<a href="https://www.linkedin.com/company/prachurya/?viewAsMember=true" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>, 
+		and 
+		<a href="https://discord.gg/YphRT5cq" target="_blank" class="text-blue-400 hover:underline">Discord</a>!
+	</p>
+	<p class="text-white mb-4">
+		Use our event hashtag <strong>#HACKxAMRITA</strong> and our club hashtag <strong>#PrachuryaTechCommunity</strong> when you share your hackathon journey. Don't forget to check in for announcements, tips, and sneak peeks!
+	</p>
+	<button class="success-button bg-green-500 text-white py-2 px-4 rounded" onclick="window.location.href='home.html'">OK</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="Google Sheet.js"></script>
+<script>
+
+const addMemberButton = document.getElementById('add-member-btn');
+const additionalMembersContainer = document.getElementById('additional-members'); // Corrected ID to match your HTML
+let memberCount = 2; // Start from 3 since the first 3 members are already in the HTML
+const maxMembers = 5;
+
+addMemberButton.addEventListener('click', () => {
+    if (memberCount < maxMembers) {
+        memberCount++;
+        
+        // Create a new div to hold the member's information and input fields
+        const newMemberContainer = document.createElement('div');
+        newMemberContainer.classList.add('mb-6'); // Margin at the bottom for spacing
+
+        // Adding member number heading and input fields
+        newMemberContainer.innerHTML = `
+            <h5 class="text-lg font-semibold text-cyan-300 mb-2">Member ${memberCount} Information</h5>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" name="member${memberCount}-name" placeholder="Member Name *" class="input-field" required>
+                <input type="text" name="member${memberCount}-regno" placeholder="Member ID: AV.EN/SC.U4CSE/AIXXXXX *" class="input-field" required>
+                <input type="email" name="member${memberCount}-email" placeholder="Member College Email *" class="input-field" required>
+                <input type="text" name="member${memberCount}-contact" placeholder="Member Contact Number *" class="input-field" required>
+                <select name="member${memberCount}-year" class="input-field" required>
+                    <option value="">Member  Year of Study</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                </select>
+                <select name="member${memberCount}-branch" class="input-field" required>
+                    <option value="">Member  Department of Study</option>
+                    <option value="CSE">CSE</option>
+                    <option value="AIE">AIE</option>
+                    <option value="CCE">CCE</option>
+                </select>
+            </div>
+        `;
+
+        additionalMembersContainer.appendChild(newMemberContainer);
+    } else {
+        alert('Maximum of 6 members allowed.');
+    }
+});
+
+
+
+</script>
+
+</body>
+</html>

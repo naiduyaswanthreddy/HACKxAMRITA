@@ -1,0 +1,281 @@
+:root {
+    --primary-color: #00ff88;
+    --secondary-color: #00ccff;
+    --accent-color: #4ef8ff;
+    --bg-color: #0a0a2a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    
+
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    
+}
+
+.cyber-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(transparent 95%, var(--primary-color) 95%),
+                      linear-gradient(90deg, transparent 95%, var(--primary-color) 95%);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.form-container {
+    background: rgba(10, 10, 42, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+    width: 900px;
+    margin: 0 auto;
+}
+
+
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.add-member-btn, .submit-btn {
+    flex: 1;
+    padding: 0.75rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-member-btn {
+    background-color: var(--accent-color);
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    font-weight: bold;
+}
+
+
+
+/* Style the dropdown itself */
+.input-field {
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1); /* Red background color */
+    color: white; /* White text color */
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* Remove default styling for Safari */
+    -moz-appearance: none; /* Remove default styling for Firefox */
+}
+
+/* Add a custom dropdown arrow */
+.input-field::after {
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    pointer-events: none;
+}
+
+/* Dropdown menu options */
+.input-field option {
+    background-color: #2e2e2e; /* Dark background color for options */
+    color: white; /* White text color */
+    padding: 5px;
+}
+
+/* Adjust focus effect */
+.input-field:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.add-member-btn, .submit-btn {
+    color: black; /* Set text color to black */
+}
+
+
+
+
+
+
+
+
+
+
+.highlighted-text {
+    font-size: 2rem; /* Increase the font size */
+    font-weight: bold; /* Make it bold */
+    color: #ffffff; /* Text color (highlight color, e.g., bright orange) */
+    background-color: #0a0a2a;; /* Background color for contrast */
+    padding: 0.2rem 0.5rem; /* Add padding around text */
+    border-radius: 8px; /* Rounded corners for smooth edges */
+    display: inline-block; /* Allows padding and background to apply neatly */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Add subtle shadow for depth */
+    text-transform: uppercase; /* Make text uppercase for emphasis */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading-spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #00ff88;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.success-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 10, 42, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 20px #00ff88;
+    max-width: 600px;
+    width: 90%;
+    z-index: 1001;
+    text-align: center;
+}
+
+.success-button {
+    background: linear-gradient(45deg, #00ff88, #00ccff);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.success-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1. Form container width for mobile screens */
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%;
+        padding: 1rem;
+    }
+}
+
+/* 2. Adjust font size for larger text elements */
+@media (max-width: 768px) {
+    .highlighted-text {
+        font-size: 1.5rem; /* Reduce the font size for mobile screens */
+        padding: 0.15rem 0.4rem;
+    }
+    
+    .text-2xl {
+        font-size: 1.75rem; /* Adjust heading sizes for mobile */
+    }
+}
+
+/* 3. Modify button layout for stacking and padding adjustments */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .add-member-btn, .submit-btn {
+        width: 100%;
+        padding: 1rem; /* Increase padding for easier touch */
+        margin-bottom: 1rem;
+    }
+}
+
+/* 4. Center align text for better readability on mobile */
+@media (max-width: 768px) {
+    .social-links li {
+        display: inline-block;
+        margin: 0 0.5rem; /* Adjust spacing between icons */
+    }
+
+    .main-content, .success-message {
+        text-align: center;
+    }
+}
+
+/* 5. Cyber grid overlay opacity reduction for mobile */
+@media (max-width: 768px) {
+    .cyber-grid {
+        background-size: 50px 50px;
+        opacity: 0.07; /* Reduce opacity for a less cluttered look */
+    }
+}
