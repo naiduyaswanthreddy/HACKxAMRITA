@@ -1,14 +1,14 @@
 # HACKxAMRITA Website
 
 ## 🚀 Project Overview
-A dynamic and responsive website developed for HACKxAMRITA, serving as the central platform for hackathon information, registration, and participant support. The website streamlines the entire participant journey from registration to submission while providing real-time support.
+A dynamic and responsive website developed for HACKxAMRITA  Hackathon, serving as the central platform for hackathon information, registration, and participant support. The website streamlines the entire participant journey from registration to submission while providing real-time support.
 
 ## 🛠️ Technologies Used
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Backend:** Node.js
 - **Database:** Google Sheets (for registration data)
 - **Integration:** Google Apps Script
-- **Deployment:** [Your Deployment Platform]
+- **Deployment:** https://hackxamrita.netlify.app/
 
 ## ✨ Key Features
 - **Responsive Design**
@@ -33,6 +33,7 @@ A dynamic and responsive website developed for HACKxAMRITA, serving as the centr
   - Prize information
   - Venue details and directions
   - Organizing crew information
+  - Hackathon Schedule
 
 ## 🎯 Core Functionalities
 1. **User Registration**
@@ -94,7 +95,7 @@ function onFormSubmit(e) {
 For any queries regarding the website:
 - Open an issue
 - Use the live chat feature on the website
-- Contact the development team at [your-email]
+- Contact the development team at [yeswanthreddynaidu@gmail.com]
 
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE.md file for details
