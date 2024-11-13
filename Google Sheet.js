@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyGy8dDxikX93oCDiu6CemRsSe9Wfra3F3N6r9fCAV3WiyqE8sKzV-iB4JavLRum0Ka/exec'
+const scriptURL = 'Link'
 const form = document.forms['contact-form']
 const loadingOverlay = document.getElementById('loadingOverlay')
 const successMessage = document.getElementById('successMessage')
